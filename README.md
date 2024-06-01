@@ -14,8 +14,7 @@ kata_number_to_french_converter/
 ├── pyproject.toml
 ├── requirements.txt
 └── tests
-├── **init**.py
-└── test_converter.py
+└──── test_converter.py
 ```
 
 ### Files Description
