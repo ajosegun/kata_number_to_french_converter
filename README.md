@@ -32,11 +32,7 @@ kata_number_to_french_converter/
 
 1. Clone the repository: `git clone https://github.com/ajosegun/kata_number_to_french_converter.git`
 2. Navigate to the project directory: `cd kata_number_to_french_converter`
-3. Install dependencies: `pip install -r requirements.txt`
-
-## Installation
-
-To install the project dependencies, run:
+3. To install the project dependencies, run:
 
 ```bash
 pip install -r requirements.txt
@@ -49,6 +45,12 @@ poetry install
 ```
 
 ## Usage
+
+Activate a virtual environment
+
+```bash
+poetry shell
+```
 
 ### 1. Web API
 
