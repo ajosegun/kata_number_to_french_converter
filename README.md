@@ -5,7 +5,7 @@ This project provides a Python library, command-line interface (CLI), and web AP
 ## Project Structure
 
 ```
-kata-number-to-french-converter/
+kata_number_to_french_converter/
 ├── README.md
 ├── app.py
 ├── cli.py
