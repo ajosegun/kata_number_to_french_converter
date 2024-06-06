@@ -85,7 +85,7 @@ You will get the below as a response
 ```
 
 <number>: The number to convert.
---lang: Language variant (fr for standard French, bg for Belgian French). Default is fr.
+--lang: Language variant (fr for standard French, be for Belgian French). Default is fr.
 
 ### 3. Python Library
 

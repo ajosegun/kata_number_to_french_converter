@@ -5,7 +5,7 @@ class FrenchNumberTranslator:
 
     Attributes:
         lang (str): The language variant for conversion. Default is "fr" (French).
-                    Another supported option is Belgian French, indicated by "bg".
+                    Another supported option is Belgian French, indicated by "be".
 
     Methods:
         convert_number(n: int) -> str:
@@ -44,7 +44,7 @@ class FrenchNumberTranslator:
                 80: "quatre-vingts",
                 90: "quatre-vingt-dix",
             }
-        elif self.lang == "bg":
+        elif self.lang == "be":
             self.special_tens = {
                 70: "septante",
                 80: "huitante",
@@ -137,3 +137,11 @@ def translate_to_french(number: int, lang: str = "fr") -> str:
     if not isinstance(number, int) or number < 0:
         raise ValueError("Number must be a non-negative integer")
     return FrenchNumberTranslator(lang).convert_number(number)
+
+
+def translate_to_french_list(list__of_numbers: list, lang: str = "fr") -> str:
+    if len(list__of_numbers) < 1:
+        raise ValueError("Can't process an empty list")
+
+    for number in list__of_numbers:
+        yield translate_to_french(number, lang)
