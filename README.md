@@ -4,7 +4,8 @@ This project provides a Python library, command-line interface (CLI), and web AP
 
 ## Project Structure
 
-kata-number-to-french-converter/
+```
+kata_number_to_french_converter/
 ├── README.md
 ├── app.py
 ├── cli.py
@@ -13,8 +14,8 @@ kata-number-to-french-converter/
 ├── pyproject.toml
 ├── requirements.txt
 └── tests
-├── **init**.py
-└── test_converter.py
+└──── test_converter.py
+```
 
 ### Files Description
 
@@ -31,11 +32,7 @@ kata-number-to-french-converter/
 
 1. Clone the repository: `git clone https://github.com/ajosegun/kata_number_to_french_converter.git`
 2. Navigate to the project directory: `cd kata_number_to_french_converter`
-3. Install dependencies: `pip install -r requirements.txt`
-
-## Installation
-
-To install the project dependencies, run:
+3. To install the project dependencies, run:
 
 ```bash
 pip install -r requirements.txt
@@ -48,6 +45,12 @@ poetry install
 ```
 
 ## Usage
+
+Activate a virtual environment
+
+```bash
+poetry shell
+```
 
 ### 1. Web API
 
