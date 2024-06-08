@@ -74,7 +74,7 @@ class FrenchNumberTranslator:
         elif n in self.special_tens:
             return self.special_tens[n]
         elif n < 80:
-            if n - 60 == 1:
+            if n % 10 == 1:
                 return "soixante-et-" + self._two_digit_to_french(n - 60)
             else:
                 return "soixante-" + self._two_digit_to_french(n - 60)
@@ -139,7 +139,7 @@ def translate_to_french(number: int, lang: str = "fr") -> str:
     return FrenchNumberTranslator(lang).convert_number(number)
 
 
-def translate_to_french_list(list__of_numbers: list, lang: str = "fr") -> str:
+def translate_to_french_list(list__of_numbers: list, lang: str = "fr"):
     if len(list__of_numbers) < 1:
         raise ValueError("Can't process an empty list")
 

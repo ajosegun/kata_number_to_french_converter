@@ -20,6 +20,9 @@ class Testtranslate_to_french(unittest.TestCase):
         self.assertEqual(translate_to_french(51), "cinquante-et-un")
         self.assertEqual(translate_to_french(68), "soixante-huit")
         self.assertEqual(translate_to_french(70), "soixante-dix")
+        self.assertEqual(translate_to_french(71), "soixante-et-onze")
+        self.assertEqual(translate_to_french(72), "soixante-douze")
+        self.assertEqual(translate_to_french(74), "soixante-quatorze")
         self.assertEqual(translate_to_french(75), "soixante-quinze")
         self.assertEqual(translate_to_french(99), "quatre-vingt-dix-neuf")
 
@@ -30,7 +33,7 @@ class Testtranslate_to_french(unittest.TestCase):
         self.assertEqual(translate_to_french(111), "cent-onze")
         self.assertEqual(translate_to_french(123), "cent-vingt-trois")
         self.assertEqual(translate_to_french(168), "cent-soixante-huit")
-        self.assertEqual(translate_to_french(171), "cent-soixante-onze")
+        self.assertEqual(translate_to_french(171), "cent-soixante-et-onze")
         self.assertEqual(translate_to_french(175), "cent-soixante-quinze")
         self.assertEqual(translate_to_french(199), "cent-quatre-vingt-dix-neuf")
         self.assertEqual(translate_to_french(200), "deux-cents")
