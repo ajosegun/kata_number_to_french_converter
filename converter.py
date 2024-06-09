@@ -36,20 +36,36 @@ class FrenchNumberTranslator:
             "neuf",
         ]
         self.teens = ["dix", "onze", "douze", "treize", "quatorze", "quinze", "seize"]
-        self.tens = ["", "dix", "vingt", "trente", "quarante", "cinquante", "soixante"]
 
         if self.lang == "fr":
+            self.tens = [
+                "",
+                "dix",
+                "vingt",
+                "trente",
+                "quarante",
+                "cinquante",
+                "soixante",
+            ]
+
             self.special_tens = {
                 70: "soixante-dix",
                 80: "quatre-vingts",
                 90: "quatre-vingt-dix",
             }
         elif self.lang == "be":
-            self.special_tens = {
-                70: "septante",
-                80: "huitante",
-                90: "nonante",
-            }
+            self.tens = [
+                "",
+                "dix",
+                "vingt",
+                "trente",
+                "quarante",
+                "cinquante",
+                "soixante",
+                "septante",
+                "huitante",
+                "nonante",
+            ]
         else:
             raise ValueError("Unsupported language variant")
 
@@ -68,11 +84,14 @@ class FrenchNumberTranslator:
             return self.teens[n - 10]
         elif n < 20:
             return "dix-" + self.units[n - 10]
+
+        elif self.lang == "be" and n < 100:
+            return self._handle_tens(n)
         elif n < 70:
             return self._handle_tens(n)
-
         elif n in self.special_tens:
             return self.special_tens[n]
+
         elif n < 80:
             if n % 10 == 1:
                 return "soixante-et-" + self._two_digit_to_french(n - 60)
