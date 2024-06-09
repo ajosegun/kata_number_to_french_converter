@@ -50,6 +50,7 @@ class FrenchNumberTranslator:
 
             self.special_tens = {
                 70: "soixante-dix",
+                71: "soixante-et-onze",
                 80: "quatre-vingts",
                 90: "quatre-vingt-dix",
             }
@@ -91,12 +92,8 @@ class FrenchNumberTranslator:
             return self._handle_tens(n)
         elif n in self.special_tens:
             return self.special_tens[n]
-
         elif n < 80:
-            if n % 10 == 1:
-                return "soixante-et-" + self._two_digit_to_french(n - 60)
-            else:
-                return "soixante-" + self._two_digit_to_french(n - 60)
+            return "soixante-" + self._two_digit_to_french(n - 60)
         else:
             return "quatre-vingt" + (
                 "s" if n == 80 else "-" + self._two_digit_to_french(n - 80)
